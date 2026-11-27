@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Bhagavad Gita Verse</title>
+  <meta name="description" content="A verse of the Bhagavad Gita each day, in Sanskrit, transliteration and English.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Devanagari:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <h1 class="site-title"><a href="./">Bhagavad Gita</a></h1>
+      <p class="site-sub" id="day-label">Verse of the day</p>
+      <div class="mode" role="group" aria-label="Which verses to cycle through">
+        <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">All verses</button>
+        <button type="button" class="mode-btn" data-mode="featured" aria-pressed="false">Featured</button>
+      </div>
+    </header>
+
+    <article class="verse" id="verse" aria-live="polite" hidden>
+      <p class="ref"><a id="ref-link" href="#"><span id="ref"></span></a></p>
+      <p class="chapter-name"><span id="chapter-name"></span> <span class="chapter-name-sa" lang="sa" id="chapter-name-sa"></span></p>
+
+      <p class="sanskrit" lang="sa" id="sanskrit"></p>
+      <p class="translit" lang="sa-Latn" id="translit"></p>
+      <div class="rule" aria-hidden="true">✦</div>
+      <blockquote class="translation" id="translation"></blockquote>
+      <p class="credit">Translated by <span id="translator"></span> (1922)</p>
+    </article>
+
+    <p class="status" id="status">Loading…</p>
+
+    <nav class="controls" aria-label="Verse navigation">
+      <button type="button" id="prev" title="Previous (←)"><span aria-hidden="true">←</span> Previous</button>
+      <button type="button" id="random" title="Random verse (R)">Random</button>
+      <button type="button" id="today" title="Back to today (T)">Today</button>
+      <button type="button" id="next" title="Next (→)">Next <span aria-hidden="true">→</span></button>
+    </nav>
+
+    <footer class="footer">
+      <p>English: Annie Besant, <a href="https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)"><cite>The Bhagavad-Gita</cite></a>, 4th edition (1922), public domain.
+        Sanskrit and transliteration: <a href="https://github.com/vedicscriptures/bhagavad-gita-data">vedicscriptures/bhagavad-gita-data</a> (GPL-3.0).</p>
+      <p>The daily verse changes at midnight Pacific time.</p>
+    </footer>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
